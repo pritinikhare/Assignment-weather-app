@@ -28,7 +28,7 @@ function App() {
   return (
     <>
       <div className='App'>
-        <h1>Weather Forecast App</h1><br />
+        <h1>Weather Forecast </h1><br />
         
         <input className='input' type="text" value={city} onChange={handleChange} placeholder ='Search'/>
         <button type='button' onClick={handleSearch} >Search</button>
