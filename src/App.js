@@ -5,8 +5,6 @@ import axios from 'axios';
 function App() {
   const [city, setCity] = useState("");
   const [ info, setInfo] = useState({} )
-  // const day = new Date(info.location.localtime).toDateString();
-
   const getDetails = (cityName) =>{
     if(!cityName) return
     const api = `http://api.weatherstack.com/current?access_key=567da32557f2c89d438341b441070484&query=${cityName}`
@@ -34,8 +32,6 @@ function App() {
         
         <input className='input' type="text" value={city} onChange={handleChange} placeholder ='Search'/>
         <button type='button' onClick={handleSearch} >Search</button>
-        
-
       </div>
       {
         Object.keys(info).length > 0 && 
@@ -46,7 +42,6 @@ function App() {
           <p>Wind speed : {info.current.wind_speed} km/h</p>
           <p>Humidity : {info.current.humidity} %</p>
           <p>LocalTime :  {info.location.localtime}</p>
-
         </div>
       }
     </>
